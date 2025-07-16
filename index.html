@@ -2,47 +2,96 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nathan Bugeaud - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem auto;
-      max-width: 600px;
-      padding: 1rem;
+      padding-top: 60px;
     }
-    h1 {
+    .hero {
       text-align: center;
+      padding: 60px 20px;
+      background-color: #f8f9fa;
     }
-    input, textarea {
-      width: 100%;
-      padding: 0.7rem;
-      margin: 0.5rem 0;
+    .hero h1 {
+      font-size: 2.5rem;
     }
-    button {
-      padding: 0.7rem 1.5rem;
-      background: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
+    .section {
+      padding: 60px 20px;
+    }
+    .btn-cv {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Contactez-moi</h1>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Bugeaud Nathan</h1>
+    <p class="lead">À la recherche d'une alternance en développement web / logiciel</p>
+    <a href="CV_Nathan_BUGEAUD_epita.pdf" class="btn btn-dark btn-cv" download>Télécharger mon CV</a>
+  </section>
 
-  <form action="https://formspree.io/f/mwpqkzlp" method="POST">
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+  <!-- À propos -->
+  <section class="section container">
+    <h2>À propos de moi</h2>
+    <p>Étudiant en 3ᵉ année de BUT Informatique à Amiens, je suis passionné par le développement web et logiciel. Je suis motivé, autonome, et curieux, et je cherche une alternance pour intégrer l’EPITA en mastère d’ingénierie logicielle.</p>
+  </section>
+
+  <!-- Projets -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2>Projets</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>💼 Site E-commerce (PHP natif + Crédit Agricole)</h5>
+          <p>Développement d'un module de paiement sécurisé et intégration de l'API Crédit Agricole pour un site de vente.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>✈️ Site d'aéroport</h5>
+          <p>Projet scolaire complet : conception UI + développement backend sous Laravel en modèle MVC. Affichage interactif des vols.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section class="section container">
+    <h2>Compétences</h2>
+    <ul>
+      <li>HTML, CSS, PHP, JavaScript, AJAX, Bootstrap</li>
+      <li>React.js, Vue.js, Java, Leaflet.js</li>
+      <li>Laravel, MySQL, Git, WordPress</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/abcxyz" method="POST">
+        <div class="mb-3">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" name="nom" id="nom" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea name="message" id="message" rows="5" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center p-4">
+    <small>&copy; 2025 Nathan Bugeaud</small>
+  </footer>
 
 </body>
 </html>
